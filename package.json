@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/kivohin/Windmill-Hut/issues"
   },
-  "homepage": "https://github.com/kivohin/Windmill-Hut#readme"
+  "homepage": "https://github.com/kivohin/Windmill-Hut#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.24.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
