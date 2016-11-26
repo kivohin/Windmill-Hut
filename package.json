@@ -1,0 +1,22 @@
+{
+  "name": "windmill-hut",
+  "version": "1.0.0",
+  "description": "Weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kivohin/Windmill-Hut.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Anthony Nabuurs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kivohin/Windmill-Hut/issues"
+  },
+  "homepage": "https://github.com/kivohin/Windmill-Hut#readme"
+}
