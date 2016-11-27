@@ -11,7 +11,4 @@ var HelloUniverse = React.createClass({
   }
 })
 
-ReactDOM.render(
-  <HelloUniverse />,
-  document.getElementById('app')
-);
+module.exports = HelloUniverse;
