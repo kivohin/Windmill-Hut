@@ -1,14 +1,14 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
 
-var HelloUniverse = React.createClass({
+var Main = React.createClass({
   render: function() {
     return(
       <div>
         Hello Universe!
+        {this.props.children}
       </div>
     )
   }
 })
 
-module.exports = HelloUniverse;
+module.exports = Main;
