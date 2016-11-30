@@ -10,9 +10,8 @@ var Home = React.createClass({
 
   render: function() {
     return(
-      <div className="jumbotron col-sm-12 text-center" style={styles.backgroundImg}>
-        <h1>Windmill Hut</h1>
-        <p className="lead">Enter a city and country</p>
+      <div className="col-sm-12 text-center" style={styles.background}>
+        <h1 style={styles.header}>Enter a city and country</h1>
         <div className="col-sm-4 col-sm-offset-4">
           <form>
             <div className="form-group">
