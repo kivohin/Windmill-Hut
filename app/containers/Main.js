@@ -1,5 +1,33 @@
 var React = require('react');
-var styles = require('../styles');
+
+var styles = {
+  mainContainer: {
+    width: '100%',
+    height: '100vh'
+  },
+
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 5
+  },
+
+  header: {
+    margin: 0
+  },
+
+  formContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  formButton: {
+    margin: '10px'
+  }
+}
 
 var Main = React.createClass({
   getInitialState: function() {
@@ -10,11 +38,13 @@ var Main = React.createClass({
 
   render: function() {
     return(
-      <div style={styles.container}>
-        <h2>Windmill Hut</h2>
-        <div style={styles.navbar}>
-          <form>
-            <div className="form-group">
+      <div style={styles.mainContainer}>
+        
+        <div className="test" style={styles.container}>
+          <h2 style={styles.header}>Windmill Hut</h2>
+          
+          <div style={styles.formContainer}>
+            <div>
               <input
                 className="form-control"
                 type="text"
@@ -22,14 +52,15 @@ var Main = React.createClass({
                 value={this.state.city} />
             </div>
 
-            <div className="form-group">
+            <div>
               <button
-                className="btn btn-success btn-block"
-                type="submit">
+                className="btn btn-success"
+                type="submit"
+                style={styles.formButton}>                
                   Get Weather
               </button>
             </div>
-          </form>
+          </div>
         </div>
 
         {this.props.children}

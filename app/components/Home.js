@@ -1,5 +1,20 @@
 var React = require('react');
-var styles = require('../styles');
+
+var styles = {
+  container: {
+    backgroundImage: "url('app/images/windmill-river-sm.jpg')",
+    backgroundSize: 'cover',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    height: 'calc(100% - 64px)'
+  },
+
+  header: {
+    fontWeight: '100',
+    color: '#fff'
+  }
+}
 
 var Home = React.createClass({
   getInitialState: function() {
@@ -10,7 +25,7 @@ var Home = React.createClass({
 
   render: function() {
     return(
-      <div className="col-sm-12 text-center" style={styles.background}>
+      <div className="col-sm-12 text-center" style={styles.container}>
         <h1 style={styles.header}>Enter a city and country</h1>
         <div className="col-sm-4 col-sm-offset-4">
           <form>
