@@ -10,11 +10,13 @@ var styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    background: '#0E2611',
     padding: 5
   },
 
   header: {
-    margin: 0
+    margin: 0,
+    color: '#fff'
   },
 
   formContainer: {
@@ -36,20 +38,33 @@ var Main = React.createClass({
     }
   },
 
+  handleUpdateCity: function(e) {
+    this.setState({
+      city: e.target.value,
+    });
+  },
+
+  handleSubmitCity: function(e) {
+    e.preventDefault();
+    var city = this.state.city
+    console.log(this.state.city);
+  },
+
   render: function() {
     return(
       <div style={styles.mainContainer}>
         
-        <div className="test" style={styles.container}>
+        <div style={styles.container}>
           <h2 style={styles.header}>Windmill Hut</h2>
           
-          <div style={styles.formContainer}>
+          <form onSubmit={this.handleSubmitCity} style={styles.formContainer}>
             <div>
               <input
                 className="form-control"
                 type="text"
                 placeholder="Valencia, Spain"
-                value={this.state.city} />
+                value={this.state.city}
+                onChange={this.handleUpdateCity} />
             </div>
 
             <div>
@@ -60,7 +75,7 @@ var Main = React.createClass({
                   Get Weather
               </button>
             </div>
-          </div>
+          </form>
         </div>
 
         {this.props.children}

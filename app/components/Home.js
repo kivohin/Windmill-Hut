@@ -23,18 +23,31 @@ var Home = React.createClass({
     }
   },
 
+  handleUpdateCity: function(e) {
+    this.setState({
+      city: e.target.value,
+    });
+  },
+
+  handleSubmitCity: function(e) {
+    e.preventDefault();
+    var city = this.state.city
+    console.log(this.state.city);
+  },
+
   render: function() {
     return(
       <div className="col-sm-12 text-center" style={styles.container}>
         <h1 style={styles.header}>Enter a city and country</h1>
         <div className="col-sm-4 col-sm-offset-4">
-          <form>
+          <form onSubmit={this.handleSubmitCity}>
             <div className="form-group">
               <input
                 className="form-control"
                 type="text"
                 placeholder="Valencia, Spain"
-                value={this.state.city} />
+                value={this.state.city}
+                onChange={this.handleUpdateCity} /> />
             </div>
 
             <div className="form-group">
