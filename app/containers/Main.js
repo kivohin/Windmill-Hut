@@ -1,4 +1,5 @@
 var React = require('react');
+var api = require('../helpers/api');
 
 var styles = {
   mainContainer: {
@@ -40,14 +41,15 @@ var Main = React.createClass({
 
   handleUpdateCity: function(e) {
     this.setState({
-      city: e.target.value,
+      city: e.target.value
     });
   },
 
   handleSubmitCity: function(e) {
     e.preventDefault();
-    var city = this.state.city
+    var city = this.state.city;
     console.log(this.state.city);
+    console.log(api.getCityForecast(this.state.city));
   },
 
   render: function() {

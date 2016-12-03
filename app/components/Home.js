@@ -47,7 +47,7 @@ var Home = React.createClass({
                 type="text"
                 placeholder="Valencia, Spain"
                 value={this.state.city}
-                onChange={this.handleUpdateCity} /> />
+                onChange={this.handleUpdateCity} />
             </div>
 
             <div className="form-group">
