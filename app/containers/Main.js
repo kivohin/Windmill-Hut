@@ -1,5 +1,4 @@
 var React = require('react');
-var api = require('../helpers/api');
 
 var styles = {
   mainContainer: {
@@ -53,7 +52,6 @@ var Main = React.createClass({
     e.preventDefault();
     var city = this.state.city;
     console.log(this.state.city);
-    console.log(api.getCityForecast(this.state.city));
     this.context.router.push('/forecast/' + this.state.city);
   },
 
