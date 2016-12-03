@@ -33,6 +33,10 @@ var styles = {
 }
 
 var Main = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
   getInitialState: function() {
     return {
       city: ''
@@ -50,6 +54,7 @@ var Main = React.createClass({
     var city = this.state.city;
     console.log(this.state.city);
     console.log(api.getCityForecast(this.state.city));
+    this.context.router.push('/forecast/' + this.state.city);
   },
 
   render: function() {
@@ -73,7 +78,7 @@ var Main = React.createClass({
               <button
                 className="btn btn-success"
                 type="submit"
-                style={styles.formButton}>                
+                style={styles.formButton}>
                   Get Weather
               </button>
             </div>

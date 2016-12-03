@@ -1,4 +1,5 @@
 var React = require('react');
+var api = require('../helpers/api');
 
 var styles = {
   container: {
@@ -17,6 +18,10 @@ var styles = {
 }
 
 var Home = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
   getInitialState: function() {
     return {
       city: ''
@@ -33,6 +38,8 @@ var Home = React.createClass({
     e.preventDefault();
     var city = this.state.city
     console.log(this.state.city);
+    console.log(api.getCityForecast(this.state.city));
+    this.context.router.push('/forecast/' + this.state.city);
   },
 
   render: function() {
