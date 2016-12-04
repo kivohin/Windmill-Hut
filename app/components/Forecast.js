@@ -38,7 +38,7 @@ function Forecast(props) {
       <h3 style={styles.subHeader}>Select a day</h3>
       <div style={styles.dayItem}>
         {props.forecast.list.map(function(listItem) {
-          return <DayItem key={listItem.dt} day={listItem} />
+          return <DayItem key={listItem.dt} day={listItem} handleClick={props.handleClick.bind(null, listItem)} />
         })}
       </div>
     </div>
@@ -48,7 +48,8 @@ function Forecast(props) {
 Forecast.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   forecast: PropTypes.object.isRequired,
-  cityName: PropTypes.string.isRequired
+  cityName: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 module.exports = Forecast;

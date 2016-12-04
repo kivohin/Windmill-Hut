@@ -17,7 +17,7 @@ function DayItem(props) {
   var description = props.day.weather[0].description;
 
   return(
-    <div>
+    <div onClick={props.handleClick}>
       <img src={'./app/images/weather-icons/' + icon + '.png'} alt="Weather"/>
       <h3>{date}</h3>
       <h4>{description}</h4>
@@ -29,7 +29,8 @@ DayItem.propTypes = {
   day: PropTypes.shape({
     dt: PropTypes.number.isRequired,
     weather: PropTypes.array.isRequired
-  }).isRequired
+  }).isRequired,
+  handleClick: PropTypes.func.isRequired
 }
 
 module.exports = DayItem;
