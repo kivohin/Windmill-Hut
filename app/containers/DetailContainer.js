@@ -5,7 +5,9 @@ var DetailContainer = React.createClass({
   render: function() {
     return(
       <div>
-        <Detail />
+        <Detail
+          dayWeather={this.props.location.state.dayWeather}
+          city={this.props.routeParams.city} />
       </div>
     )
   }
