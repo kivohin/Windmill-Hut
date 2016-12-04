@@ -2,7 +2,7 @@ var React = require('react');
 
 var styles = {
   container: {
-    backgroundImage: "url('app/images/windmill-river-sm.jpg')",
+    backgroundImage: "url('app/images/link-windmill.jpg')",
     backgroundSize: 'cover',
     display: 'flex',
     flexDirection: 'column',
