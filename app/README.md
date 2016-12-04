@@ -15,8 +15,6 @@ Zelda inspired minimalist weather app made with React.js in which users can chec
 
 ## Usage
 
-I published the assignment on Zeit's now.sh, after a while of no traffic it will go in sleep mode, it will become active again after making a request, but expect a initial short delay, you can find it here:
-
-https://dist-efoceczjeq.now.sh/
+Soon will be published.
 
 If any problem should arise or have any question feel free to contact me! :)
